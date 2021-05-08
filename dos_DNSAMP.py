@@ -8,8 +8,6 @@ from threading import Thread
 from time import sleep
 from random import choice, randint
 from os import system
-from hashlib import sha256
-from getpass import getpass
 
 def clear():
     system('clear' or 'cls')
@@ -31,30 +29,6 @@ def logo() :
 
 """+color.GREEN)
 
-def fulogo():
-    clear()
-    print(color.YEL+'''
-
-
-
-
-            _         FUCK YOU        _
-           |_|                       |_|
-           | |         /^^^\\         | |
-          _| |_      (| "o" |)      _| |_
-        _| | | | _    (_---_)    _ | | | |_
-       | | | | |' |    _| |_    | `| | | | |
-       |          |   /     \\   |          |
-        \\        /  / /(. .)\\ \\  \\        /
-          \\    /  / /  | . |  \\ \\  \\    /
-            \\  \\/ /    ||Y||    \\ \\/  /
-             \\__/      || ||      \\__/
-                       () ()
-                       || ||
-                      ooO Ooo        
-
-    ''')   #this unnormal bot ok!
-    sleep(100)
 
 
 
@@ -123,31 +97,5 @@ def START():
 
 
 if __name__ == "__main__":
-    pasworld_try = 0
     logo()
-    #Take a string and convert it to sha256
-    
-    while True:
-        pasworld_try = pasworld_try + 1
-        pwd = str(getpass("[ ] app password:"))
-        pw = 'c6aa11096128178b41f4de7ed933dc4f2b36ece01022fe79bd4a3dcb892dd99f'
-        pwdh = sha256(pwd.encode('utf-8')).hexdigest()
-        if pwdh == pw : 
-            logo()
-            START()
-            input("Press ENTER to EXIT")
-            break
-            
-        elif pasworld_try >= 2 and pasworld_try <= 3:
-            logo()
-            print("Wrong password.. \n")
-
-        elif pasworld_try >= 4:
-            clear()
-            fulogo()
-            print("Wrong password... \nCtrl C  to EXIT")
-            break
-
-        else:
-            logo()
-            print("Wrong password")
+    START()
