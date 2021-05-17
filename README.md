@@ -2,7 +2,6 @@
 
 ## tcp ip spoofو and udp dns APM by python and scapy!
 
-This code is written for learning and testing!
-Do not use it for bad things
+:warning: **This code is written for learning and testing! Do not use it for bad things.**
 
 ![image](https://github.com/onionj/ddos/blob/master/ddos.jpg)
