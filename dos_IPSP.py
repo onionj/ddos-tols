@@ -2,7 +2,6 @@
 
 from scapy.all import RandShort, Raw, send, RandIP
 from scapy.layers.inet import IP, TCP
-from time import sleep
 from random import randint
 from time import sleep
 from os import system
